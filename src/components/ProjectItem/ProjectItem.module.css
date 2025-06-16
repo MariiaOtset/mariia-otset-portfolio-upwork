@@ -1,0 +1,113 @@
+.projectItem {
+  border-radius: 20px;
+  background-color: rgb(250, 250, 250);
+  box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.20);
+  margin: 0 20px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgb(242, 242, 242);
+  }
+}
+
+.projectImage {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.projectInfoContainer {
+padding: 20px 22px;
+}
+
+.projectTitle {
+    margin-bottom: 8px;
+}
+
+.projectDescription, .projectTechItems {
+    font-weight: 300;
+}
+
+.projectTechItems {
+    background-color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.projectTitle, .projectDescription {
+    text-align: left;
+} 
+
+.projectTechList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px 0 21px;
+    gap: 8px;
+    font-weight: 400;
+}
+
+.pageLink, .linksWrapper {
+    display: flex;
+}
+
+.pageLink {
+    gap: 6px;
+    text-decoration: underline;
+text-decoration-skip-ink: none;
+text-underline-position: from-font;
+color: black;
+
+
+&:hover {
+    color:rgb(1, 1, 1);
+    transform: scale(1.1);
+}
+
+&:focus {
+    color:rgb(1, 1, 1);
+}
+}
+
+.linksWrapper {
+    gap: 36px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .projectItem {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0 35px;
+  }
+
+  .projectImage {
+    max-width: 55%;
+    object-fit: contain;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 18px;
+  }
+
+  .projectInfoContainer{
+        padding: 25px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+    .projectItem {
+        max-width: 1050px;
+    }
+
+    .projectImage{
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+  .projectInfoContainer {
+    padding: 22px;
+  }
+}

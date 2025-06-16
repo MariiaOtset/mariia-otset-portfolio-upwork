@@ -1,0 +1,125 @@
+.educationSection {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  background-color: #141414;
+  color: #fff;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.certificatesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.certificate {
+  background-color: #302d2d;
+  border-radius: 15px;
+  padding: 30px 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid #2a2a2a;
+  max-width: 350px;
+}
+
+.certificate:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.certificate h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #ff9200;
+}
+
+.institution {
+  font-style: italic;
+  margin-bottom: 12px;
+  color: #b3b3b3;
+}
+
+.description {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  max-width: 350px;
+}
+
+.year {
+  font-weight: bold;
+  color: #d3d3d3;
+  margin-top: 15px;
+}
+
+.certLink {
+  display: block;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.certLink:hover {
+  transform: scale(1.05);
+}
+
+.certImage {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.linkIcon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #454242;
+}
+
+.collegeCertificate .linkIcon {
+  top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .educationSection {
+    padding: 40px 30px;
+  }
+
+  .certificatesContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .certificate {
+    width: calc(50% - 15px);
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .certImage {
+    max-width: 280px;
+    height: 330px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .certificate {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .certificatesContainer {
+    flex-wrap: nowrap;
+    gap: 40px;
+  }
+}

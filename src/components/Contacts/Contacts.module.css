@@ -1,0 +1,107 @@
+.contactsSection {
+  padding: 30px 20px 35px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contactsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 20px 0 10px;
+  max-width: 260px;
+}
+
+.contactsTitle {
+  text-align: start;
+  display: inline;
+}
+
+.contactsItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 10px 10px 0;
+}
+
+.contactsLink {
+  color: #1f1f1f;
+
+  &:hover {
+    color: #7b23d8;
+  }
+}
+
+.contactsIcon {
+  font-size: 25px;
+}
+
+.phoneIcon {
+  margin-left: 4px;
+}
+
+.emailIcon {
+  width: 33px;
+  height: 33px;
+}
+
+.locationIcon {
+  width: 30px;
+  height: 32px;
+}
+
+.contactsComponent {
+  margin-left: -5px;
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .contactsInfoWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactsList {
+    flex-direction: row;
+    max-width: none;
+    gap: 20px;
+    order: 2;
+  }
+
+  .contactsItem {
+    gap: 4px;
+
+    &:nth-child(3) {
+      margin-left: -6px;
+    }
+  }
+
+  .contactsComponent {
+    order: 1;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contactsTitle {
+    text-align: center;
+    display: block;
+  }
+
+  .contactsInfoWrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 35px;
+  }
+
+  .contactsComponent {
+    margin: 0;
+  }
+
+  .contactsList {
+    margin: 0;
+  }
+}
