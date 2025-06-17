@@ -1,42 +1,30 @@
 import css from "./Contacts.module.css";
-import ContactsList from "../ContactsList/ContactsList.jsx";
-import { BsTelephoneFill } from "react-icons/bs";
-import { IoLocationSharp } from "react-icons/io5";
-import { HiOutlineMail } from "react-icons/hi";
+import { FaReact } from "react-icons/fa";
+import { FaUpwork } from "react-icons/fa6";
+import { SiTypescript, SiTailwindcss } from "react-icons/si";
 
-const Contacts = () => {
+const NextSteps = () => {
   return (
-    <div className={css.contactsSection} id="contacts">
-      <h2 className={css.contactsTitle}>Contacts</h2>
-      <div className={css.contactsInfoWrapper}>
-        <ul className={css.contactsList}>
-          <li className={css.contactsItem}>
-            <BsTelephoneFill
-              className={`${css.contactsIcon} ${css.phoneIcon}`}
-            />
-            <a href="tell:+447391727924" className={css.contactsLink}>
-              +44 739 172 79 24
-            </a>
-          </li>
-          <li className={css.contactsItem}>
-            <HiOutlineMail className={`${css.contactsIcon} ${css.emailIcon}`} />
-            <a href="mailto:mariiaotset@gmail.com" className={css.contactsLink}>
-              mariiaotset@gmail.com
-            </a>
-          </li>
-          <li className={css.contactsItem}>
-            <IoLocationSharp
-              className={`${css.contactsIcon} ${css.locationIcon}`}
-            />
-            <p>Darlington, United Kingdom</p>
-          </li>
-        </ul>
-        <div className={css.contactsComponent}>
-          <ContactsList />
-        </div>
+    <footer className={css.footerSection} id="next-steps">
+      <h2 className={css.footerTitle}>
+        Let&apos;s Build Something Great Together
+      </h2>
+      <p className={css.footerSubtitle}>
+        Full Stack Developer — React / TypeScript / Next.js / Bolt
+      </p>
+
+      <div className={css.techIcons}>
+        <FaReact className={css.icon} title="React" />
+        <SiTypescript className={css.icon} title="TypeScript" />
+        <SiTailwindcss className={css.icon} title="Tailwind CSS" />
+        <FaUpwork className={css.icon} title="Available on Upwork" />
       </div>
-    </div>
+
+      <p className={css.footerNote}>
+        © {new Date().getFullYear()} All rights reserved. Available on Upwork.
+      </p>
+    </footer>
   );
 };
 
-export default Contacts;
+export default NextSteps;

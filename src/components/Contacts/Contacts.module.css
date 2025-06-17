@@ -1,107 +1,43 @@
-.contactsSection {
-  padding: 30px 20px 35px 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contactsList {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  margin: 20px 0 10px;
-  max-width: 260px;
-}
-
-.contactsTitle {
-  text-align: start;
-  display: inline;
-}
-
-.contactsItem {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 10px 10px 0;
-}
-
-.contactsLink {
+.footerSection {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
   color: #1f1f1f;
-
-  &:hover {
-    color: #7b23d8;
-  }
+  border-top: 1px solid #ddd;
 }
 
-.contactsIcon {
-  font-size: 25px;
+.footerTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
-.phoneIcon {
-  margin-left: 4px;
+.footerSubtitle {
+  font-size: 1rem;
+  margin-bottom: 24px;
+  color: #555;
 }
 
-.emailIcon {
-  width: 33px;
-  height: 33px;
-}
-
-.locationIcon {
-  width: 30px;
-  height: 32px;
-}
-
-.contactsComponent {
-  margin-left: -5px;
+.techIcons {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 25px;
 }
 
-@media screen and (min-width: 768px) {
-  .contactsInfoWrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .contactsList {
-    flex-direction: row;
-    max-width: none;
-    gap: 20px;
-    order: 2;
-  }
-
-  .contactsItem {
-    gap: 4px;
-
-    &:nth-child(3) {
-      margin-left: -6px;
-    }
-  }
-
-  .contactsComponent {
-    order: 1;
-    margin-top: 25px;
-  }
+.icon {
+  font-size: 30px;
+  color: #7b23d8;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-@media screen and (min-width: 1024px) {
-  .contactsTitle {
-    text-align: center;
-    display: block;
-  }
+.icon:hover {
+  transform: scale(1.2);
+  color: #5a0fc8;
+}
 
-  .contactsInfoWrapper {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    gap: 35px;
-  }
-
-  .contactsComponent {
-    margin: 0;
-  }
-
-  .contactsList {
-    margin: 0;
-  }
+.footerNote {
+  font-size: 0.95rem;
+  color: #888;
 }

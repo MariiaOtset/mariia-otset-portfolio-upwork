@@ -96,6 +96,7 @@
   .leftSideWrapper {
     display: flex;
     flex-direction: column;
+    margin-top: 130px;
   }
 
   .jobTitle {
@@ -111,6 +112,12 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .leftSideWrapper {
+    justify-content: center;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .textContacts {
     margin: 35px 0 5px;
@@ -122,5 +129,6 @@
 
   .leftSideWrapper {
     margin-left: 12px;
+    margin-top: 150px;
   }
 }

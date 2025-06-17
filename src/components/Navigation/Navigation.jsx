@@ -3,7 +3,6 @@ import css from "./Navigation.module.css";
 import { RiCloseFill } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GoArrowUpRight } from "react-icons/go";
-import { PiReadCvLogo } from "react-icons/pi";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -73,18 +72,12 @@ const Navigation = () => {
             </a>
           </li>
           <li className={css.linkWrapper}>
-            <a href="#contacts" className={css.link} onClick={handleLinkClick}>
-              Contacts <GoArrowUpRight className={css.arrow} />
-            </a>
-          </li>
-          <li className={css.cvLinkWrapper}>
             <a
-              href="https://drive.google.com/file/d/1IQ73lZulXV1R1utAYksxJ9mRsdrQAqCV/view?usp=sharing"
-              className={`${css.link} ${css.cvWrapper}`}
-              target="_blank"
+              href="#next-steps"
+              className={css.link}
+              onClick={handleLinkClick}
             >
-              <p className={css.cv}>Download CV</p>
-              <PiReadCvLogo className={css.cvIcon} />
+              Next Steps <GoArrowUpRight className={css.arrow} />
             </a>
           </li>
         </ul>

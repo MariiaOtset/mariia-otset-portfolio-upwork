@@ -1,4 +1,3 @@
-import ContactsList from "../ContactsList/ContactsList.jsx";
 import TypingAnimation from "../TypingAnimation/TypingAnimation.jsx";
 import css from "./AboutMe.module.css";
 import { useState, useEffect } from "react";
@@ -16,12 +15,6 @@ const AboutMe = () => {
     <div className={css.sectionWrapper} id="about">
       <div className={css.leftSideWrapper}>
         {windowWidth >= 768 && <TypingAnimation />}
-        {windowWidth >= 768 && (
-          <div>
-            <p className={css.textContacts}>Let&apos;s get in touch:</p>
-            <ContactsList />
-          </div>
-        )}
       </div>
 
       <div className={css.aboutWrapper}>
@@ -33,9 +26,10 @@ const AboutMe = () => {
         {windowWidth < 768 && <TypingAnimation />}
         <h2 className={css.aboutTitle}>About me</h2>
         <p className={css.aboutText}>
-          For two years now, I've been immersed in the world of full-stack web development, expanding my skills and delivering real results. <br /> My
-          favorite part of programming is the problem-solving aspect. <br /> I
-          love the feeling of finally finding a solution to a problem.
+          For two years now, I&apos;ve been immersed in the world of full-stack
+          web development, expanding my skills and delivering real results.{" "}
+          <br /> My favorite part of programming is the problem-solving aspect.{" "}
+          <br /> I love the feeling of finally finding a solution to a problem.
         </p>
         <p className={css.aboutText}>
           I am always looking for new challenges and opportunities to contribute
@@ -46,12 +40,6 @@ const AboutMe = () => {
           history, watching movies, and riding my bike. I also enjoy learning
           new things.
         </p>
-        {windowWidth < 768 && (
-          <div>
-            <p className={css.textContacts}>Let&apos;s get in touch:</p>
-            <ContactsList />
-          </div>
-        )}
       </div>
     </div>
   );

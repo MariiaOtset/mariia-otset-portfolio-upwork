@@ -21,12 +21,6 @@ Welcome to my portfolio website! This site showcases my skills and projects as a
 
 This portfolio is deployed on Vercel, ensuring fast loading times and reliable performance.
 
-## 📞 Contact
-
-Feel free to reach out to me for collaboration opportunities or any questions:
-
-- Email: mariiaotset@gmail.com
-
 ## 🌐 Live Demo
 
 [Visit My Portfolio](https://mariia-otset-portfolio.vercel.app/)
