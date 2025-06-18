@@ -8,7 +8,6 @@ Welcome to my portfolio website! This site showcases my skills and projects as a
 - Sections highlighting my skills, projects, education, and contact information
 - Interactive navigation for smooth scrolling between sections
 - Project showcase with links to live demos and source code
-- Downloadable CV for more detailed information
 
 ## 💻 Technologies Used
 
