@@ -1,24 +1,11 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState } from "react";
 import css from "./Navigation.module.css";
 import { RiCloseFill } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GoArrowUpRight } from "react-icons/go";
-import { FaDownload } from "react-icons/fa";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
-      setScrolled(isScrolled);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -45,125 +32,55 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
-  const navigationItems = [
-    { href: "#hero", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#experience", label: "Experience" },
-    { href: "#tech-stack", label: "Tech Stack" },
-    { href: "#projects", label: "Projects" },
-    { href: "#achievements", label: "Achievements" },
-    { href: "#education", label: "Education" },
-    { href: "#next-steps", label: "Contact" }
-  ];
-
   return (
     <>
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.8 }}
-        className={`${css.navigation} ${scrolled ? css.scrolled : ''}`}
-      >
-        <div className={css.navContainer}>
-          <motion.a 
-            href="#hero" 
-            className={css.logo} 
-            onClick={handleLinkClick}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span className={css.logoText}>Mariia</span>
-            <span className={css.logoAccent}>Otset</span>
-          </motion.a>
-
-          <div className={css.desktopNav}>
-            <ul className={css.navList}>
-              {navigationItems.map((item, index) => (
-                <motion.li
-                  key={item.href}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  <a 
-                    href={item.href} 
-                    className={css.navLink} 
-                    onClick={handleLinkClick}
-                  >
-                    {item.label}
-                  </a>
-                </motion.li>
-              ))}
-            </ul>
-
-            <motion.button
-              className={css.resumeButton}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+      <div className={css.mobileNavigation}>
+        <a href="#about" className={css.mobileLink} onClick={handleLinkClick}>
+          My portfolio
+        </a>
+        <button className={css.buttons} type="button" onClick={toggleMenu}>
+          <RxHamburgerMenu className={`${css.icon} ${css.iconOpenMenu}`} />
+        </button>
+      </div>
+      <div className={`${css.container} ${isMenuOpen ? "" : css.hidden}`}>
+        <button
+          className={`${css.buttons} ${css.close}`}
+          type="button"
+          onClick={toggleMenu}
+        >
+          <RiCloseFill className={css.icon} />
+        </button>
+        <ul className={css.wrapper}>
+          <li className={css.linkWrapper}>
+            <a href="#about" className={css.link} onClick={handleLinkClick}>
+              About me <GoArrowUpRight className={css.arrow} />
+            </a>
+          </li>
+          <li className={css.linkWrapper}>
+            <a href="#skills" className={css.link} onClick={handleLinkClick}>
+              Skills <GoArrowUpRight className={css.arrow} />
+            </a>
+          </li>
+          <li className={css.linkWrapper}>
+            <a href="#projects" className={css.link} onClick={handleLinkClick}>
+              Projects <GoArrowUpRight className={css.arrow} />
+            </a>
+          </li>
+          <li className={css.linkWrapper}>
+            <a href="#education" className={css.link} onClick={handleLinkClick}>
+              Education <GoArrowUpRight className={css.arrow} />
+            </a>
+          </li>
+          <li className={css.linkWrapper}>
+            <a
+              href="#next-steps"
+              className={css.link}
+              onClick={handleLinkClick}
             >
-              <FaDownload className={css.downloadIcon} />
-              Resume
-            </motion.button>
-          </div>
-
-          <button 
-            className={css.mobileMenuButton} 
-            type="button" 
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            <RxHamburgerMenu className={css.menuIcon} />
-          </button>
-        </div>
-      </motion.nav>
-
-      {/* Mobile Menu Overlay */}
-      <div className={`${css.mobileMenuOverlay} ${isMenuOpen ? css.open : ''}`}>
-        <div className={css.mobileMenuContent}>
-          <button
-            className={css.closeButton}
-            type="button"
-            onClick={toggleMenu}
-            aria-label="Close menu"
-          >
-            <RiCloseFill className={css.closeIcon} />
-          </button>
-
-          <nav className={css.mobileNav}>
-            <ul className={css.mobileNavList}>
-              {navigationItems.map((item, index) => (
-                <motion.li
-                  key={item.href}
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: isMenuOpen ? 1 : 0, x: isMenuOpen ? 0 : -50 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  className={css.mobileNavItem}
-                >
-                  <a 
-                    href={item.href} 
-                    className={css.mobileNavLink} 
-                    onClick={handleLinkClick}
-                  >
-                    {item.label}
-                    <GoArrowUpRight className={css.linkArrow} />
-                  </a>
-                </motion.li>
-              ))}
-            </ul>
-
-            <motion.button
-              className={css.mobileResumeButton}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: isMenuOpen ? 1 : 0, y: isMenuOpen ? 0 : 50 }}
-              transition={{ duration: 0.3, delay: 0.5 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaDownload className={css.downloadIcon} />
-              Download Resume
-            </motion.button>
-          </nav>
-        </div>
+              Next Steps <GoArrowUpRight className={css.arrow} />
+            </a>
+          </li>
+        </ul>
       </div>
     </>
   );
