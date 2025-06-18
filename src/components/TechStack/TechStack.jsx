@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { 
   SiReact, SiNodedotjs, SiTypescript, SiNextdotjs, SiTailwindcss,
-  SiMongodb, SiPostgresql, SiRedis, SiDocker, SiAmazonaws,
+  SiMongodb, SiPostgresql, SiRedis, SiDocker,
   SiGit, SiJest, SiCypress, SiFigma, SiGraphql, SiPrisma
 } from "react-icons/si";
 import { FaDatabase, FaCloud, FaTools, FaPalette } from "react-icons/fa";
@@ -45,7 +45,6 @@ const techCategories = [
     icon: <FaCloud />,
     color: "#FF9900",
     technologies: [
-      { name: "AWS", icon: <SiAmazonaws />, level: 80, color: "#FF9900" },
       { name: "Docker", icon: <SiDocker />, level: 85, color: "#2496ED" },
       { name: "Git", icon: <SiGit />, level: 95, color: "#F05032" },
     ]
