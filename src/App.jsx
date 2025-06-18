@@ -5,6 +5,8 @@ import Contacts from "./components/Contacts/Contacts.jsx";
 import Navigation from "./components/Navigation/Navigation.jsx";
 import SkillsContainer from "./components/SkillsContainer/SkillsContainer.jsx";
 import Loader from "./components/Loader/Loader.jsx";
+import Hero from "./components/Hero/Hero.jsx";
+import TechStack from "./components/TechStack/TechStack.jsx";
 
 const MyProjects = lazy(() => import("./components/MyProjects/MyProjects.jsx"));
 const Education = lazy(() => import("./components/Education/Education.jsx"));
@@ -14,7 +16,9 @@ function App() {
     <>
       <Suspense fallback={<Loader />}>
         <Navigation />
+        <Hero />
         <AboutMe />
+        <TechStack />
         <SkillsContainer />
         <MyProjects />
         <Education />
