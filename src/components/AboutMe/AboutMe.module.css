@@ -1,7 +1,6 @@
 .sectionWrapper {
   position: relative;
   min-height: 100vh;
-  margin-top: 100px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   overflow: hidden;
   display: flex;
@@ -223,11 +222,17 @@
   flex: 1;
 }
 
+@media screen and (max-width: 767px) {
+}
+.sectionWrapper {
+  margin-top: 100px;
+}
+
 /* Mobile Styles */
 @media screen and (max-width: 1439px) {
   .container {
     flex-direction: column;
-    gap: 2rem;
+    gap: 0rem;
     padding: 0 1rem;
   }
 
@@ -269,17 +274,16 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .container {
-    gap: 2rem;
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .leftSideWrapper {
+    display: flex;
+    min-height: 450px;
   }
+}
 
-  .mainTitle {
-    font-size: 2.8rem;
-  }
-
-  .contentSection {
-    padding: 1.8rem;
+@media screen and (min-width: 768px) {
+  .sectionWrapper {
+    margin-top: 30px;
   }
 }
 
