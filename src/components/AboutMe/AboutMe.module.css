@@ -1,7 +1,7 @@
-/* 
 .sectionWrapper {
   position: relative;
   min-height: 100vh;
+  margin-top: 100px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   overflow: hidden;
   display: flex;
@@ -21,7 +21,11 @@
 
 .floatingShape {
   position: absolute;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
   border-radius: 50%;
   animation: float 6s ease-in-out infinite;
 }
@@ -51,13 +55,17 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(10deg); }
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
 }
 
 .container {
   position: relative;
-  z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -79,7 +87,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
   width: 100%;
 }
 
@@ -89,7 +96,6 @@
 }
 
 .titleSection {
-  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -138,8 +144,13 @@
 }
 
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .contentSection {
@@ -160,7 +171,7 @@
 }
 
 .aboutTitle::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -213,52 +224,48 @@
 }
 
 /* Mobile Styles */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1439px) {
   .container {
     flex-direction: column;
     gap: 2rem;
     padding: 0 1rem;
   }
-  
+
   .leftSideWrapper {
     display: none;
   }
-  
+
   .aboutWrapper {
     order: 1;
   }
-  
+
   .mainTitle {
     font-size: 2.5rem;
   }
-  
+
   .hello {
     font-size: 1.5rem;
   }
-  
+
   .jobTitle {
     font-size: 1.4rem;
   }
-  
+
   .aboutTitle {
     font-size: 1.8rem;
   }
-  
+
   .contentSection {
     padding: 1.5rem;
   }
-  
+
   .aboutCard {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .cardIcon {
     align-self: center;
-  }
-  
-  .titleSection {
-    margin-bottom: 2rem;
   }
 }
 
@@ -266,11 +273,11 @@
   .container {
     gap: 2rem;
   }
-  
+
   .mainTitle {
     font-size: 2.8rem;
   }
-  
+
   .contentSection {
     padding: 1.8rem;
   }
@@ -280,15 +287,15 @@
   .sectionWrapper {
     padding: 4rem 0;
   }
-  
+
   .container {
     gap: 4rem;
   }
-  
+
   .aboutContent {
     gap: 2rem;
   }
-  
+
   .aboutCard {
     padding: 2rem;
   }
