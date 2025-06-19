@@ -1,4 +1,4 @@
-.animationWrapper {
+/* .animationWrapper {
   display: inline-block;
   font-size: 120px;
   height: 150px;
@@ -23,5 +23,118 @@
   .animationWrapper {
     font-size: 190px;
     margin-top: -25px;
+  }
+} */
+
+
+.typingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.codeWindow {
+  background: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  min-width: 350px;
+  border: 1px solid #333;
+}
+
+.windowHeader {
+  background: #2d2d2d;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.windowButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+}
+
+.button:nth-child(1) {
+  background: #ff5f57;
+}
+
+.button:nth-child(2) {
+  background: #ffbd2e;
+}
+
+.button:nth-child(3) {
+  background: #28ca42;
+}
+
+.codeContent {
+  padding: 20px;
+  font-family: 'Fira Code', 'Monaco', 'Cascadia Code', monospace;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.codeLine {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.lineNumber {
+  color: #6a737d;
+  margin-right: 16px;
+  min-width: 20px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.keyword {
+  color: #f97583;
+  font-weight: 600;
+}
+
+.variable {
+  color: #79b8ff;
+}
+
+.operator {
+  color: #e1e4e8;
+}
+
+.string {
+  color: #9ecbff;
+}
+
+.cursor {
+  color: #79b8ff;
+  animation: blink 1s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@media screen and (max-width: 767px) {
+  .codeWindow {
+    min-width: 280px;
+  }
+  
+  .codeContent {
+    padding: 15px;
+    font-size: 14px;
+  }
+  
+  .typingContainer {
+    padding: 1rem;
   }
 }
