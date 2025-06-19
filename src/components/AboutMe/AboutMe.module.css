@@ -65,11 +65,11 @@
 
 .container {
   position: relative;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
   align-items: center;
   width: 100%;
 }
@@ -90,7 +90,6 @@
 }
 
 .aboutWrapper {
-  flex: 1;
   color: white;
 }
 
@@ -290,10 +289,6 @@
 @media screen and (min-width: 1024px) {
   .sectionWrapper {
     padding: 4rem 0;
-  }
-
-  .container {
-    gap: 4rem;
   }
 
   .aboutContent {
