@@ -8,18 +8,24 @@ import filmotekaImg from "../../assets/images/filmoteka.jpg";
 import webStudioImg from "../../assets/images/web-studio.jpg";
 import imageSearchImg from "../../assets/images/image-search.jpg";
 import focusFrameImg from "../../assets/images/focus-frame.jpg";
-import contactsBookImg from "../../assets/images/contacts-book.jpg";
 import kpopShopImg from "../../assets/images/kpop-shop.png";
+import landingGeneratorImg from "../../assets/images/landingGeneratorImg.jpg";
 
 const projectsData = [
   {
-    image: gameLandingImg,
-    title: "Game Landing Page",
+    image: landingGeneratorImg,
+    title: "AI-Powered SaaS for Instant Landing Page Generation",
     description:
-      "An interactive landing page for a mobile match-3 game. Implemented an adaptive design for mobile and desktop users. Role: developer of the Gallery, How to Play, Game Video sections and Privacy Policy page. Commercial team project.",
-    technologies: ["HTML", "CSS", "JS"],
-    liveLink: "https://vitayusko.github.io/Puppy-Diary-Epic-Match-3/",
-    githubLink: "https://github.com/vitayusko/Puppy-Diary-Epic-Match-3",
+      "Instant Page is a micro-SaaS that instantly generates landing pages using AI prompts. Built with Lovable.dev, it features responsive design, animated transitions and custom branding - all created without manual coding.",
+    technologies: [
+      "Lovable.dev",
+      "Next.js",
+      "Supabase",
+      "Stripe",
+      "React",
+      "Tailwind CSS",
+    ],
+    liveLink: "https://instant-page-smith.lovable.app/",
   },
   {
     image: kpopShopImg,
@@ -36,6 +42,15 @@ const projectsData = [
       "Tailwind CSS",
     ],
     liveLink: "https://frabjous-empanada-f7581f.netlify.app/",
+  },
+  {
+    image: gameLandingImg,
+    title: "Game Landing Page",
+    description:
+      "An interactive landing page for a mobile match-3 game. Implemented an adaptive design for mobile and desktop users. Role: developer of the Gallery, How to Play, Game Video sections and Privacy Policy page. Commercial team project.",
+    technologies: ["HTML", "CSS", "JS"],
+    liveLink: "https://vitayusko.github.io/Puppy-Diary-Epic-Match-3/",
+    githubLink: "https://github.com/vitayusko/Puppy-Diary-Epic-Match-3",
   },
   {
     image: waterTrackerImg,
@@ -136,24 +151,6 @@ const projectsData = [
     technologies: ["HTML", "CSS", "JS"],
     liveLink: "https://instreamer1.github.io/project-teamwork09/",
     githubLink: "https://github.com/inmate1/project-teamwork09",
-  },
-  {
-    image: contactsBookImg,
-    title: "Contact Book",
-    description:
-      "Contact Book website is an authentication-based application for managing personal contacts. The app requires user authentication for access to the contacts management features. Individual project.",
-    technologies: [
-      "HTML",
-      "CSS",
-      "JS",
-      "React",
-      "Redux Toolkit",
-      "React Router",
-      "JWT",
-      "Axios",
-    ],
-    liveLink: "https://goit-react-hw-08-tau-ecru.vercel.app/",
-    githubLink: "https://github.com/MariiaOtset/goit-react-hw-08",
   },
 ];
 
