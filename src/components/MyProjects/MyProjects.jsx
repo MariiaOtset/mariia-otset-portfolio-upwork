@@ -10,8 +10,24 @@ import imageSearchImg from "../../assets/images/image-search.jpg";
 import focusFrameImg from "../../assets/images/focus-frame.jpg";
 import kpopShopImg from "../../assets/images/kpop-shop.png";
 import landingGeneratorImg from "../../assets/images/landingGeneratorImg.jpg";
+import learningPlatformImg from "../../assets/images/learningPlatform.jpg";
 
 const projectsData = [
+  {
+    image: learningPlatformImg,
+    title: "Online Learning Platform",
+    description:
+      "Built and deployed an online learning platform with Stripe payments (one-time & installments), Supabase authentication, full course management, quizzes with leaderboard, student dashboard, notes, and discussions. Fully responsive and mobile-optimized.",
+    technologies: [
+      "Replit",
+      "React",
+      "Node.js",
+      "Supabase",
+      "Stripe",
+      "Tailwind CSS",
+    ],
+    liveLink: "https://learn.nikoxstudios.com/",
+  },
   {
     image: landingGeneratorImg,
     title: "AI-Powered SaaS for Instant Landing Page Generation",
