@@ -41,7 +41,7 @@ const projectsData = [
       "React",
       "Tailwind CSS",
     ],
-    liveLink: "https://instant-page-smith.lovable.app/",
+    liveLink: "https://instant-page.lovable.app/",
   },
   {
     image: kpopShopImg,
