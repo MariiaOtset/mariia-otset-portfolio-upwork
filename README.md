@@ -22,6 +22,6 @@ This portfolio is deployed on Vercel, ensuring fast loading times and reliable p
 
 ## 🌐 Live Demo
 
-[Visit My Portfolio](https://mariia-otset-portfolio.vercel.app/)
+[Visit My Portfolio](https://mariia-otset-portfolio-upwork.vercel.app/)
 
 Thank you for visiting my portfolio!
