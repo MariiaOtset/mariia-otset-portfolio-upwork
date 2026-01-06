@@ -39,10 +39,10 @@
 
 .footerNote {
   font-size: 0.95rem;
- 
+ color: #888;
 }
 
 .availableUpwork {
-   color: #888;
-  margin-right: 8px;
+   
+  margin-left: 8px;
 }
