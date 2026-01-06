@@ -10,19 +10,21 @@ const NextSteps = () => {
         Let&apos;s Build Something Great Together
       </h2>
       <p className={css.footerSubtitle}>
-        Full Stack Developer — React / TypeScript / Next.js / Bolt
+        Full Stack & AI Engineer | MERN Stack | Bolt, Lovable, Replit, Vibe Coder
       </p>
 
-      <div className={css.techIcons}>
+      {/* <div className={css.techIcons}>
         <FaReact className={css.icon} title="React" />
         <SiTypescript className={css.icon} title="TypeScript" />
         <SiTailwindcss className={css.icon} title="Tailwind CSS" />
         <FaUpwork className={css.icon} title="Available on Upwork" />
-      </div>
-
-      <p className={css.footerNote}>
-        © {new Date().getFullYear()} All rights reserved. Available on Upwork.
-      </p>
+      </div> */}
+<p>
+© {new Date().getFullYear()} All rights reserved.
+  <a href="https://www.upwork.com/freelancers/~01ab7fe2a9e7d90639" className={css.footerNote}>
+         Available on Upwork.
+      </a>
+</p>
     </footer>
   );
 };
