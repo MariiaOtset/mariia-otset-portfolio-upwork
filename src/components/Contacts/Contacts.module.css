@@ -43,6 +43,9 @@
 }
 
 .availableUpwork {
-   
   margin-left: 8px;
+}
+
+.availableUpwork:hover {
+  color: #0f5132;
 }
