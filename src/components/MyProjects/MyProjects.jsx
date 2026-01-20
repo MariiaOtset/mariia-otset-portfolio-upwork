@@ -15,7 +15,7 @@ import linkedInImg from "../../assets/images/linkedIn.png";
 
 const projectsData = [
   {
-    image: linkedInImg,
+    image: learningPlatformImg,
     title: "Online Learning Platform",
     description:
       "Built and deployed an online learning platform with Stripe payments (one-time & installments), Supabase authentication, full course management, quizzes with leaderboard, student dashboard, notes, and discussions. Fully responsive and mobile-optimized.",
@@ -30,19 +30,19 @@ const projectsData = [
     liveLink: "https://learn.nikoxstudios.com/",
   },
   {
-    image: learningPlatformImg,
-    title: "Online Learning Platform",
+    image: linkedInImg,
+    title: "Agella — AI Content Studio for LinkedIn",
     description:
-      "Built and deployed an online learning platform with Stripe payments (one-time & installments), Supabase authentication, full course management, quizzes with leaderboard, student dashboard, notes, and discussions. Fully responsive and mobile-optimized.",
+      "Agella is an AI-driven platform for creating, refining, and scheduling LinkedIn content. I handled error fixes, implemented full mobile adaptation, and improved code quality. I also integrated Google Auth and Stripe subscriptions for a smoother user experience.",
     technologies: [
-      "Replit",
-      "React",
+      "Next.js",
+      "Firebase Studio",
       "Node.js",
-      "Supabase",
+      "REST API",
       "Stripe",
       "Tailwind CSS",
     ],
-    liveLink: "https://learn.nikoxstudios.com/",
+    liveLink: "https://agella.app/",
   },
   {
     image: landingGeneratorImg,
