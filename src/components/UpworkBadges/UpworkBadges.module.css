@@ -1,0 +1,237 @@
+.badgesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.darkBadgesWrapper {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.94),
+    rgba(232, 240, 255, 0.92)
+  );
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+}
+
+@media screen and (max-width: 767px) {
+  .contactBadgesWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+    width: 100%;
+    padding: 7px;
+  }
+
+  .contactBadgesWrapper .badgeItem {
+    gap: 7px;
+    font-size: 14px;
+  }
+
+  .contactBadgesWrapper .successIcon,
+  .contactBadgesWrapper .topRatedIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contactBadgesWrapper .crownIcon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .contactBadgesWrapper .starIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .darkBadgesWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+    width: 100%;
+    padding: 7px;
+    overflow: visible;
+  }
+
+  .darkBadgesWrapper .badgeItem {
+    gap: 7px;
+    font-size: 14px;
+  }
+
+  .darkBadgesWrapper .successIcon,
+  .darkBadgesWrapper .topRatedIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .darkBadgesWrapper .crownIcon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .darkBadgesWrapper .starIcon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.badgeItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  color: #050505;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.1;
+  white-space: normal;
+}
+
+.successIcon,
+.topRatedIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  color: #1f5fdc;
+}
+
+.successIcon {
+  border: 3px solid #1f5fdc;
+  border-radius: 50%;
+}
+
+.topRatedIcon {
+  background-color: #1f5fdc;
+  color: #fff;
+  clip-path: polygon(50% 0%, 92% 24%, 92% 76%, 50% 100%, 8% 76%, 8% 24%);
+}
+
+.crownIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.starIcon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.4;
+}
+
+@media screen and (min-width: 390px) {
+  .badgesWrapper {
+    gap: 12px;
+  }
+
+  .badgeItem {
+    gap: 8px;
+    font-size: 16px;
+  }
+
+  .successIcon,
+  .topRatedIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .crownIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .starIcon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .badgesWrapper {
+    gap: 12px;
+    padding: 7px 9px;
+  }
+
+  .badgeItem {
+    font-size: 16px;
+  }
+
+  .successIcon,
+  .topRatedIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .crownIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .starIcon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .contactBadgesWrapper {
+    gap: 8px;
+    padding: 6px 7px;
+  }
+
+  .contactBadgesWrapper .badgeItem {
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .contactBadgesWrapper .successIcon,
+  .contactBadgesWrapper .topRatedIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contactBadgesWrapper .crownIcon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .contactBadgesWrapper .starIcon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .badgesWrapper {
+    gap: 16px;
+    padding: 8px 10px;
+  }
+
+  .badgeItem {
+    font-size: 18px;
+  }
+
+  .successIcon,
+  .topRatedIcon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .crownIcon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .starIcon {
+    width: 25px;
+    height: 25px;
+  }
+}

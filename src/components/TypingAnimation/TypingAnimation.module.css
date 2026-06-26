@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   padding: 2rem;
 }
 
@@ -10,6 +11,8 @@
   border-radius: 12px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  width: 100%;
+  max-width: 420px;
   min-width: 350px;
   border: 1px solid #333;
 }
@@ -102,16 +105,38 @@
 }
 
 @media screen and (max-width: 767px) {
+  .typingContainer {
+    padding: 1rem 0;
+  }
+
   .codeWindow {
-    min-width: 280px;
+    min-width: 0;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .windowHeader {
+    padding: 10px 12px;
+  }
+
+  .windowButtons {
+    gap: 7px;
+  }
+
+  .button {
+    width: 10px;
+    height: 10px;
   }
 
   .codeContent {
-    padding: 15px;
-    font-size: 14px;
+    padding: 14px 12px;
+    font-size: 13px;
+    line-height: 1.55;
   }
 
-  .typingContainer {
-    padding: 1.5rem;
+  .lineNumber {
+    margin-right: 10px;
+    min-width: 16px;
+    font-size: 12px;
   }
 }

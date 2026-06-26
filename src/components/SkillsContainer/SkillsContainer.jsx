@@ -3,8 +3,17 @@ import css from "./SkillsContainer.module.css";
 const SkillsContainer = () => {
   return (
     <section className={css.allSkillsWrapper} id="skills">
+      <div className={css.header}>
+        <p className={css.eyebrow}>Tech toolkit</p>
+        <h2 className={css.sectionTitle}>Skills I use to build reliable web products</h2>
+        <p className={css.description}>
+          A practical stack for responsive interfaces, product flows,
+          integrations, and full-stack web applications.
+        </p>
+      </div>
+
       <div className={css.skillsSection}>
-        <h2 className={` ${css.title} ${css.titleHardSkills}`}>Hard skills:</h2>
+        <h3 className={css.title}>Hard skills</h3>
         <ul className={`${css.hardSkillsWrapper} ${css.skill}`}>
           <li className={css.primarySkill}>HTML/CSS</li>
           <li className={css.primarySkill}>JavaScript</li>
@@ -24,11 +33,12 @@ const SkillsContainer = () => {
           <li>Swagger</li>
           <li>Responsive/Adaptive Design</li>
           <li>Figma</li>
+          <li>Stripe</li>
         </ul>
       </div>
 
       <div className={css.skillsSection}>
-        <h2 className={` ${css.title} ${css.titleSoftSkills}`}>Soft skills:</h2>
+        <h3 className={css.title}>Soft skills</h3>
         <ul className={`${css.skill} ${css.softSkill}`}>
           <li>Flexible</li>
           <li>Hardworking</li>
@@ -40,7 +50,7 @@ const SkillsContainer = () => {
       </div>
 
       <div className={css.skillsSection}>
-        <h2 className={` ${css.title} ${css.titleLanguages}`}>Languages:</h2>
+        <h3 className={css.title}>Languages</h3>
         <ul className={`${css.skill} ${css.languageSkill}`}>
           <li>English - Upper Intermediate</li>
           <li>Ukrainian - Native</li>
