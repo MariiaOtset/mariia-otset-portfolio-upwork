@@ -1,3 +1,18 @@
+.textContacts {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  box-shadow: 0px 6px 15px rgba(255, 182, 193, 0.6);
+  margin-bottom: 20px;
+}
+
 .sectionWrapper {
   position: relative;
   min-height: 100vh;
@@ -189,7 +204,8 @@
 .aboutCard {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  padding: 1.5rem;
+  padding: 1rem;
+  margin: 0 4px;
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
@@ -205,33 +221,136 @@
 }
 
 .cardIcon {
-  font-size: 2rem;
-  flex-shrink: 0;
-  padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 60px;
-  min-height: 60px;
+  font-size: 2rem;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.aboutIcon,
+.upworkIcon {
+  width: 34px;
+  height: 34px;
+}
+
+.aboutIcon {
+  color: #fff;
 }
 
 .aboutText {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 0;
   flex: 1;
 }
 
-@media screen and (max-width: 767px) {
+.upworkCard {
+  color: #fff;
+  text-decoration: none;
+  border-color: rgba(108, 212, 65, 0.38);
+  background: rgba(108, 212, 65, 0.13);
+  cursor: pointer;
 }
+
+.upworkCard:hover,
+.upworkCard:focus {
+  color: #fff;
+  background: rgba(108, 212, 65, 0.18);
+}
+
+.upworkCardIcon {
+  background: rgba(108, 212, 65, 0.22);
+}
+
+.upworkIcon {
+  color: #6cd441;
+}
+
+.upworkProof {
+  flex: 1;
+  min-width: 0;
+}
+
+.upworkBadges {
+  margin-top: 14px;
+  max-width: 100%;
+}
+
 .sectionWrapper {
-  margin-top: 100px;
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 767px) {
+  .sectionWrapper {
+    min-height: auto;
+    padding: 2rem 0 2.5rem;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 14px;
+  }
+
+  .aboutWrapper {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .contentSection {
+    width: 100%;
+    padding: 1.25rem 0.9rem;
+    border-radius: 16px;
+  }
+
+  .aboutContent {
+    gap: 1rem;
+  }
+
+  .aboutCard {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: left;
+  }
+
+  .cardIcon {
+    align-self: center;
+    width: 52px;
+    height: 52px;
+  }
+
+  .aboutIcon,
+  .upworkIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .aboutText {
+    width: 100%;
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .cardIcon {
+    align-self: flex-start;
+  }
 }
 
 /* Mobile Styles */
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1279px) {
   .container {
     flex-direction: column;
     gap: 0rem;
@@ -267,12 +386,7 @@
   }
 
   .aboutCard {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .cardIcon {
-    align-self: center;
+    align-items: flex-start;
   }
 }
 
@@ -296,9 +410,20 @@
 
   .aboutContent {
     gap: 2rem;
+    text-align: start;
   }
 
   .aboutCard {
     padding: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .sectionWrapper {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .aboutWrapper {
+    margin-top: 16px;
   }
 }

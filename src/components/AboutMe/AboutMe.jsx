@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
-import { LuLaptop, LuRocket, LuSparkles } from "react-icons/lu";
+import { FaSquareUpwork } from "react-icons/fa6";
+import { IoCodeSlash, IoRocketOutline } from "react-icons/io5";
 import TypingAnimation from "../TypingAnimation/TypingAnimation.jsx";
+import UpworkBadges from "../UpworkBadges/UpworkBadges.jsx";
 import styles from "./AboutMe.module.css";
+
+const upworkProfileUrl =
+  "https://www.upwork.com/freelancers/~01ab7fe2a9e7d90639?viewMode=1";
 
 const AboutMe = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -57,7 +62,7 @@ const AboutMe = () => {
             <div className={styles.aboutContent}>
               <div className={styles.aboutCard}>
                 <div className={styles.cardIcon}>
-                  <LuLaptop aria-hidden="true" />
+                  <IoCodeSlash className={styles.aboutIcon} aria-hidden="true" />
                 </div>
                 <p className={styles.aboutText}>
                   For two years now, I&apos;ve been immersed in the world of
@@ -70,7 +75,10 @@ const AboutMe = () => {
 
               <div className={styles.aboutCard}>
                 <div className={styles.cardIcon}>
-                  <LuRocket aria-hidden="true" />
+                  <IoRocketOutline
+                    className={styles.aboutIcon}
+                    aria-hidden="true"
+                  />
                 </div>
                 <p className={styles.aboutText}>
                   I am always looking for new challenges and opportunities to
@@ -79,16 +87,26 @@ const AboutMe = () => {
                 </p>
               </div>
 
-              <div className={styles.aboutCard}>
-                <div className={styles.cardIcon}>
-                  <LuSparkles aria-hidden="true" />
+              <a
+                href={upworkProfileUrl}
+                className={`${styles.aboutCard} ${styles.upworkCard}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className={`${styles.cardIcon} ${styles.upworkCardIcon}`}>
+                  <FaSquareUpwork className={styles.upworkIcon} aria-hidden="true" />
                 </div>
-                <p className={styles.aboutText}>
-                  When I am not coding, I enjoy reading or watching videos about
-                  history, watching movies, and riding my bike. I also enjoy
-                  learning new things.
-                </p>
-              </div>
+                <div className={styles.upworkProof}>
+                  <p className={styles.aboutText}>
+                    Trusted on Upwork for reliable delivery, clear
+                    communication, and practical web solutions that help clients
+                    move their projects forward.
+                  </p>
+                  <div className={styles.upworkBadges}>
+                    <UpworkBadges variant="dark" />
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
