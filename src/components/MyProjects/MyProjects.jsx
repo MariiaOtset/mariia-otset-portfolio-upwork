@@ -9,11 +9,11 @@ import filmotekaImg from "../../assets/images/filmoteka.jpg";
 import webStudioImg from "../../assets/images/web-studio.jpg";
 import imageSearchImg from "../../assets/images/image-search.jpg";
 import focusFrameImg from "../../assets/images/focus-frame.jpg";
-import kpopShopImg from "../../assets/images/kpop-shop.png";
+import kpopShopImg from "../../assets/images/kpop-shop.jpg";
 import landingGeneratorImg from "../../assets/images/landingGeneratorImg.jpg";
 import learningPlatformImg from "../../assets/images/learningPlatform.jpg";
-import linkedInImg from "../../assets/images/linkedIn.png";
-import taskcraftImg from "../../assets/images/taskcraft.png";
+import linkedInImg from "../../assets/images/linkedIn.jpg";
+import taskcraftImg from "../../assets/images/taskcraft.jpg";
 
 const projectsData = [
   {

@@ -1,4 +1,5 @@
 .projectItem {
+  width: 100%;
   border-radius: 20px;
   background-color: rgb(250, 250, 250);
   box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.2);
@@ -171,6 +172,28 @@ padding: 20px 22px;
   .compactProjectItem .projectImageLink .projectImage {
     width: 100%;
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .projectItem {
+    margin: 0;
+    border-radius: 14px;
+  }
+
+  .projectImage {
+    width: 100%;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+  }
+
+  .projectInfoContainer {
+    padding: 18px 16px;
+  }
+
+  .linksWrapper {
+    flex-wrap: wrap;
+    gap: 16px;
   }
 }
 

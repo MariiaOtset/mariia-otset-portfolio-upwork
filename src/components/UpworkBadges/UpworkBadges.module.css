@@ -1,6 +1,6 @@
 .badgesWrapper {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   width: fit-content;
@@ -22,6 +22,35 @@
 }
 
 @media screen and (max-width: 767px) {
+  .contactBadgesWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+    width: 100%;
+    padding: 7px;
+  }
+
+  .contactBadgesWrapper .badgeItem {
+    gap: 7px;
+    font-size: 14px;
+  }
+
+  .contactBadgesWrapper .successIcon,
+  .contactBadgesWrapper .topRatedIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contactBadgesWrapper .crownIcon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .contactBadgesWrapper .starIcon {
+    width: 18px;
+    height: 18px;
+  }
+
   .darkBadgesWrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -62,7 +91,7 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 1.1;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .successIcon,

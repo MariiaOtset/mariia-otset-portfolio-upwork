@@ -106,6 +106,7 @@
 
 .aboutWrapper {
   color: white;
+  min-width: 0;
 }
 
 .titleSection {
@@ -167,6 +168,7 @@
 }
 
 .contentSection {
+  max-width: 100%;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
@@ -202,6 +204,8 @@
 }
 
 .aboutCard {
+  width: 100%;
+  min-width: 0;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 1rem;
@@ -249,6 +253,7 @@
   line-height: 1.6;
   margin: 0;
   flex: 1;
+  overflow-wrap: anywhere;
 }
 
 .upworkCard {
@@ -295,7 +300,7 @@
 
   .container {
     width: 100%;
-    padding: 0 14px;
+    padding: 0 12px;
   }
 
   .aboutWrapper {
@@ -306,7 +311,7 @@
 
   .contentSection {
     width: 100%;
-    padding: 1.25rem 0.9rem;
+    padding: 1.15rem 0.75rem;
     border-radius: 16px;
   }
 

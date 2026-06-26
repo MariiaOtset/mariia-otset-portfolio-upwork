@@ -3,6 +3,7 @@
   padding: 48px 18px;
   background-color: #18181b;
   color: #fff;
+  overflow-x: hidden;
 }
 
 .contactsContainer {
@@ -10,11 +11,14 @@
   grid-template-columns: 1fr;
   gap: 26px;
   max-width: 1180px;
+  width: 100%;
+  min-width: 0;
   margin: 0 auto;
   align-items: center;
 }
 
 .contactsContent {
+  min-width: 0;
   text-align: center;
 }
 
@@ -51,7 +55,8 @@
 
 .contactCard {
   width: 100%;
-  max-width: 450px;
+  min-width: 0;
+  max-width: min(450px, 100%);
   margin: 0 auto;
   padding: 18px;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -73,10 +78,18 @@
   color: #52525b;
   font-size: 16px;
   line-height: 1.55;
+  overflow-wrap: anywhere;
 }
 
 .upworkBadges {
+  width: 100%;
+  max-width: 100%;
   margin-bottom: 16px;
+}
+
+.upworkBadges > * {
+  width: 100%;
+  max-width: 100%;
 }
 
 .primaryContact {
@@ -85,6 +98,7 @@
   justify-content: center;
   gap: 8px;
   width: 100%;
+  min-width: 0;
   min-height: 48px;
   margin-bottom: 18px;
   padding: 12px 14px;
@@ -92,6 +106,9 @@
   background-color: #18181b;
   color: #fff;
   font-weight: 800;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
   transition:
     transform 0.25s ease,
     background-color 0.25s ease;
@@ -122,6 +139,7 @@
   color: #3f3f46;
   font-size: 15px;
   line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .projectFitList li::before {
@@ -144,7 +162,7 @@
 
 @media screen and (max-width: 393px) {
   .contactsSection {
-    padding-inline: 20px;
+    padding-inline: 12px;
   }
 
   .contactCard {
@@ -158,6 +176,28 @@
   .cardText,
   .projectFitList li {
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contactsSection {
+    padding-inline: 12px;
+  }
+
+  .contactsTitle {
+    font-size: 30px;
+  }
+
+  .contactsText {
+    font-size: 16px;
+  }
+
+  .trustLine {
+    padding: 12px 13px;
+  }
+
+  .primaryContact {
+    padding-inline: 10px;
   }
 }
 

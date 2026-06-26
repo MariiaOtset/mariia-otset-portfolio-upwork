@@ -65,11 +65,9 @@ const AboutMe = () => {
                   <IoCodeSlash className={styles.aboutIcon} aria-hidden="true" />
                 </div>
                 <p className={styles.aboutText}>
-                  For two years now, I&apos;ve been immersed in the world of
-                  full-stack web development, expanding my skills and delivering
-                  real results. My favorite part of programming is the
-                  problem-solving aspect. I love the feeling of finally finding
-                  a solution to a problem.
+                  I help clients turn unclear ideas, rough designs, or
+                  unfinished builds into working web products that are easier to
+                  use, launch, and improve.
                 </p>
               </div>
 
@@ -81,9 +79,9 @@ const AboutMe = () => {
                   />
                 </div>
                 <p className={styles.aboutText}>
-                  I am always looking for new challenges and opportunities to
-                  contribute to the success of projects as a full-stack
-                  developer.
+                  My focus is practical execution: clear scope, responsive
+                  interfaces, reliable integrations, and steady progress from
+                  first task to final polish.
                 </p>
               </div>
 
