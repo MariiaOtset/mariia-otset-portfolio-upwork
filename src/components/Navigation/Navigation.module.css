@@ -1,28 +1,57 @@
 .container {
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background-color: #1a1a1a;
-  overflow: hidden;
-  z-index: 1000;
+  justify-content: flex-start;
+  width: auto;
+  min-width: 100vw;
+  max-width: none;
+  box-sizing: border-box;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  height: auto;
+  padding: 134px 16px 24px;
+  background-color: rgba(10, 10, 12, 0.78);
+  backdrop-filter: blur(14px);
+  overflow-y: auto;
+  z-index: 1001;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  width: min(100%, 420px);
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background-color: #18181b;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
 }
 
 .linkWrapper {
-  padding: 25px;
+  padding: 0;
 }
 
 .buttons {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: transparent;
-  border: none;
+  top: 15px;
+  right: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 .buttons:focus-within .icon {
@@ -30,19 +59,28 @@
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
   fill: white;
   transition: transform 0.4s ease;
 }
 
 .link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 46px;
+  padding: 11px 14px;
+  border-radius: 10px;
   color: #f9f7f7;
-  font-size: 30px;
-  transition: color 0.2s ease;
+  font-size: 19px;
+  font-weight: 700;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-a:focus {
+.link:focus,
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
   color: #00ff80;
 }
 
@@ -51,10 +89,14 @@ a:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
-  height: 100px;
+  background-color: rgba(10, 10, 12, 0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 70px;
   width: 100vw;
-  z-index: 2;
+  min-width: 100%;
+  padding: 0 16px;
+  z-index: 1000;
 }
 
 .iconOpenMenu,
@@ -63,31 +105,45 @@ a:focus {
 }
 
 .mobileLink {
-  font-style: italic;
-  margin-left: 40px;
-  padding: 10px;
-  font-size: 26px;
-}
-
-.cvLinkWrapper {
-  padding: 30px;
-}
-
-.cvWrapper {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  border: 1px solid #00ff80;
-  border-radius: 20px;
-  padding: 16px;
+  min-height: 42px;
+  max-width: calc(100vw - 86px);
+  padding: 8px 12px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.07);
+  color: whitesmoke;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .hidden {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-height: 620px) {
+  .container {
+    padding-top: 86px;
+  }
+
+  .wrapper {
+    gap: 6px;
+    padding: 10px;
+  }
+
+  .link {
+    min-height: 40px;
+    padding: 8px 12px;
+    font-size: 17px;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
   .mobileNavigation,
   .close,
   .arrow {
@@ -95,23 +151,44 @@ a:focus {
   }
 
   .container {
-    height: 70px;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    min-width: 0;
+    height: 75px;
+    min-height: 75px;
+    padding: 0 10px;
     display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+    backdrop-filter: none;
+    overflow: visible;
+    z-index: 1000;
   }
 
   .wrapper {
     display: flex;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .wrapper {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     position: sticky;
-    gap: 0;
+    gap: 16px;
     padding: 0;
+    width: 100%;
   }
 
   .linkWrapper,
   .linkWrapper:first-child {
-    padding: 15px;
+    padding: 0;
   }
 
   .linkWrapper:first-child {
@@ -119,28 +196,29 @@ a:focus {
   }
 
   .link {
-    font-size: 19px;
+    min-height: auto;
+    padding: 0;
+    border-radius: 0;
+    font-size: 15px;
+    font-weight: 400;
   }
 
-  .cvLinkWrapper {
-    padding: 5px;
-    margin-right: 5px;
+  .link:hover,
+  .link:focus {
+    background-color: transparent;
   }
 
-  .cvWrapper {
-    padding: 13px;
-  }
-
-  .cvIcon {
-    width: 34px;
-    height: 34px;
-  }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .wrapper {
     padding: 15px;
     width: 100%;
+    gap: 40px;
+  }
+
+  .link {
+    font-size: 19px;
   }
 
   a:hover {
