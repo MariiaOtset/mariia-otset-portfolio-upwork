@@ -22,18 +22,19 @@ const SkillsContainer = () => {
           <li className={css.primarySkill}>Node.js</li>
           <li className={css.primarySkill}>Next.js</li>
 
+          <li>Stripe</li>
+          <li>Twilio</li>
+          <li>REST API</li>
+          <li>Sass</li>
           <li>Redux</li>
           <li>Tailwind CSS</li>
-          <li>Sass</li>
           <li>CSS Modules</li>
           <li>Git</li>
           <li>MongoDB</li>
-          <li>REST API</li>
           <li>Express.js</li>
           <li>Swagger</li>
           <li>Responsive/Adaptive Design</li>
           <li>Figma</li>
-          <li>Stripe</li>
         </ul>
       </div>
 
